@@ -6,8 +6,10 @@ function EventList(){
   
 
   const componentStyle = {
+    border: '1px dotted green',
     color: '#80f'
   };
+  
 
   return (
     <div style={componentStyle}>
