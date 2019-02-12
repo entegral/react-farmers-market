@@ -12,6 +12,10 @@ module.exports = {
         use: ['eslint-loader']
       },
       {
+        test: /\.css$/,
+        use: ['style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'] 
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
