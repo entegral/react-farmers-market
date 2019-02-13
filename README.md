@@ -1,6 +1,6 @@
 # React Application Configuration
 
-#### By **Phil Mass**
+#### By **Robert Bruce & Phil Mass**
 
 ## Description
 
