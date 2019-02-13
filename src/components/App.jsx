@@ -1,21 +1,26 @@
 import React from 'react';
-import Header from './Header';
-import EventList from './EventList';
-import ProduceSelector from './ProduceSelector';  
+import Navbar from './Navbar';
+import { Switch, Route } from 'react-router-dom';
+import Produce from './Produce';
+import Schedule from './Schedule';
 
 function App() {
-  const componentStyle = {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr'
+
+  const NavbarStyle = {
+    overflow: 'hidden'
   };
-  
+
   return (
     <div>
-      <Header/> 
-      <div style={componentStyle}>
-        <EventList/>
-        <ProduceSelector/>
-      </div>
+      <Navbar style={NavbarStyle}/>
+      <Switch>
+        <Route
+          exact path='/'
+          component={ Schedule }/>
+        <Route
+          exact path='/produce'
+          component={ Produce }/>
+      </Switch>
     </div>
   );
 }

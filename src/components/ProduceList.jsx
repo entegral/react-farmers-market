@@ -1,29 +1,36 @@
 import React from 'react';
-import Produce from './Produce';
+import ProduceItem from './ProduceItem';
 import PropTypes from 'prop-types';
 
+function ProduceList ( { month, selection } ){
 
-function ProduceList ({month, items}) {
-  const h4Style = {
-    margin: '0.2em 0',
-    color: '#555'
+  const componentStyle = {
+    marginTop: 25
   };
 
   return (
-    <div>
-      <h4 style={h4Style}>{month}</h4>
-      {items.map((name, index) =>
-        <Produce
-          key={index}
-          name={name} />
-      )}
+    <div style= {componentStyle}>
+      <h3> {month} </h3>
+      <ul>
+        <li>
+          {selection.map((item, index) =>
+            <ProduceItem
+              item = {item}
+              key = {index}
+            />
+          )}
+        </li>
+
+      </ul>
     </div>
   );
 }
 
 ProduceList.propTypes = {
   month: PropTypes.string,
-  items: PropTypes.array
+  selection: PropTypes.array,
+  item: PropTypes.string
 };
+
 
 export default ProduceList;
