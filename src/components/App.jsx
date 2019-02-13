@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import { Switch, Route } from 'react-router-dom';
 import Produce from './Produce';
-import Schedule from './Schedule';
+import MarketList from './MarketList';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
       <Switch>
         <Route
           exact path='/'
-          component={ Schedule }/>
+          component={ MarketList }/>
         <Route
           exact path='/produce'
           component={ Produce }/>
