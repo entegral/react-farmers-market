@@ -12,10 +12,11 @@
   "author": "Phil Mass",
   "license": "ISC",
   "dependencies": {
-    "babel-plugin-react-css-modules": "^5.0.0",
     "css-loader": "^2.1.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-semantic-ui": "^0.2.0",
+    "semantic-ui-css": "^2.4.1",
     "style-loader": "^0.23.1"
   },
   "devDependencies": {
