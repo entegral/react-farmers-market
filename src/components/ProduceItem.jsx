@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function ProduceItem ({ item }){
 
   return (
-    <span> {item} </span>
+    <span>{item} </span>
   );
 }
 

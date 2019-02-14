@@ -6,6 +6,7 @@ import MarketList from './MarketList';
 
 function App() {
 
+
   const NavbarStyle = {
     overflow: 'hidden'
   };

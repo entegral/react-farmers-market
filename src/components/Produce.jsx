@@ -1,11 +1,17 @@
 import React from 'react';
 import ProduceList from './ProduceList';
 import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
 
 function Produce (){
 
   const componentStyle = {
-    marginTop: 75
+    marginTop: 75,
+  };
+
+  const divStyle = {
+    display: 'flex',
+    flexWrap: 'wrap'
   };
 
   const produce = [
@@ -280,14 +286,17 @@ function Produce (){
 
   return (
     <div style= {componentStyle}>
-      <h1>Seasonal Produce</h1>
-      {produce.map((item, index) =>
-        <ProduceList
-          month = {item['month']}
-          selection = {item['selection']}
-          key = {index}
-        />
-      )}
+      <Typography gutterBottom variant="h5" component="h2">Seasonal Produce</Typography>
+
+      <div style={divStyle}>
+        {produce.map((item, index) =>
+          <ProduceList
+            month = {item['month']}
+            selection = {item['selection']}
+            key = {index}
+          />
+        )}
+      </div>
     </div>
   );
 }

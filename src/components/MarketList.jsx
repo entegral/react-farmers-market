@@ -1,6 +1,7 @@
 import React from 'react';
 import MarketItem from './MarketItem';
 import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
 
 const marketSchedule = [
   {
@@ -47,15 +48,25 @@ function MarketList (){
     marginTop: 75
   };
 
+  const divStyle = {
+    display: 'flex',
+    flexWrap: 'wrap'
+  };
+
   return (
     <div style= {componentStyle}>
-      {marketSchedule.map((day, index) =>
-        <MarketItem day={day.day}
-          location={day.location}
-          hours={day.hours}
-          booth={day.booth}
-          key={index}/>
-      )}
+      <Typography gutterBottom variant="h5" component="h2">
+        Weekday Schedule
+      </Typography>
+      <div style={divStyle}>
+        {marketSchedule.map((day, index) =>
+          <MarketItem day={day.day}
+            location={day.location}
+            hours={day.hours}
+            booth={day.booth}
+            key={index}/>
+        )}
+      </div>
     </div>
   );
 }
